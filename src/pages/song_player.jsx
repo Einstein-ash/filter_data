@@ -98,7 +98,7 @@
 // ----------- 2nd giving audio direlcy -------------
 import React, { useState, useRef } from "react";
 
-// Import audio files from local assets folder
+
 import song1 from "../assets/audio/song_N.mp3";
 import song2 from "../assets/audio/song_N.mp3";
 
@@ -111,7 +111,7 @@ const AudioPlayer = () => {
   const [duration, setDuration] = useState(0);
   const audioRef = useRef(null);
 
-  // Predefined audio files
+
   const audioFiles = [
     { name: "Song 1", url: song1 },
     { name: "Song 2", url: song2 },
@@ -125,7 +125,7 @@ const AudioPlayer = () => {
     }
   };
 
-  // Handle selection from predefined songs
+
   const handleAudioSelect = (event) => {
     setAudioSrc(event.target.value);
   };
@@ -161,7 +161,7 @@ const AudioPlayer = () => {
   return (
     <div style={{ padding: "20px", maxWidth: "400px", margin: "auto", textAlign: "center", border: "1px solid #ddd", borderRadius: "10px" }}>
       
-      {/* Audio Selection Dropdown */}
+
       <label>Select a song: </label>
       <select onChange={handleAudioSelect} style={{ marginBottom: "10px", padding: "5px" }}>
         <option value="">-- Choose an Audio --</option>
@@ -172,7 +172,7 @@ const AudioPlayer = () => {
 
       <br />
 
-      {/* File Upload Option */}
+
       <input type="file" accept="audio/*" onChange={handleFileUpload} style={{ margin: "10px 0" }} />
 
       {audioSrc && (
