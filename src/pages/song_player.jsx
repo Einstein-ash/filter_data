@@ -101,6 +101,7 @@ import React, { useState, useRef } from "react";
 
 import song1 from "../assets/audio/song_N.mp3";
 import song2 from "../assets/audio/song_N.mp3";
+import song3 from "../assets/audio/Sweet_piano.mp3";
 
 const AudioPlayer = () => {
   const [audioSrc, setAudioSrc] = useState(null);
@@ -114,7 +115,8 @@ const AudioPlayer = () => {
 
   const audioFiles = [
     { name: "Song 1", url: song1 },
-    { name: "Song 2", url: song2 },
+    // { name: "Song 2", url: song2 },
+    { name: "Sweet Piano", url: song3 },
   ];
 
   // Handle uploaded file
