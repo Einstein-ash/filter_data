@@ -100,7 +100,7 @@ import React, { useState, useRef } from "react";
 
 
 import song1 from "../assets/audio/song_N.mp3";
-import song2 from "../assets/audio/song_N.mp3";
+// import song2 from "../assets/audio/song_N.mp3";
 import song3 from "../assets/audio/Sweet_piano.mp3";
 
 const AudioPlayer = () => {
