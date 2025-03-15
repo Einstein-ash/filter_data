@@ -7,15 +7,17 @@ const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState(null);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [posts, setPosts] = useState([])
   const dropdownRef = useRef(null);
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     if (!file) return;
 
-    const reader = new FileReader();
+    const reader = new FileReader(); // ?
     reader.readAsText(file);
-    reader.onload = (e) => {
+    console.log(reader)
+    reader.onload = (e) => { // ?
       const text = e.target.result;
       const parsedData = parseCSV(text);
       setCsvData(parsedData);
@@ -71,6 +73,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
+    console.log("----------------")
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdownVisible(false);
@@ -80,6 +83,20 @@ const Hero = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+useEffect(()=>{
+  const link = "https://jsonplaceholder.typicode.com/posts"
+
+  const fetchData =   () =>{
+     const data = fetch(link).then(async(result) => {
+      console.log(result)
+      const res =  await result.json()
+       console.log({res});
+        setPosts(res)
+     });
+ }
+  
+  fetchData();
+},[selectedColumn])
 
   return (
     <div>
@@ -116,8 +133,12 @@ const Hero = () => {
               </tr>
             </thead>
             <tbody>
+`              {posts?.map((item)=>(
+                    <td>{item.id}</td>
+                  ))}`
               {applySorting(csvData.filter(applyFilter)).map((row, index) => (
                 <tr key={index}>
+                  
                   {Object.values(row).map((value, i) => (
                     <td key={i}>{value}</td>
                   ))}
