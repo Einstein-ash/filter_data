@@ -118,7 +118,7 @@ const AudioPlayer = () => {
     { name: "Song 1", url: song1 },
     // { name: "Song 2", url: song2 },
     { name: "Sweet Piano", url: song3 },
-    { name: "Water - Diljit Dosanjh", url: song3 },
+    { name: "Water - Diljit Dosanjh", url: song4 },
   ];
 
   // Handle uploaded file
