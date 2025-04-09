@@ -40,7 +40,7 @@ const Scanner = () => {
   return (
     <div className='main_scanner_container'>
 
-        <video ref={videoRef} autoPlay playsInline style={{ width: '100%', height: '100%' }} />
+        <video ref={videoRef} autoPlay playsInline muted style={{ width: '100%', height: '100%' }} />
     </div>
   )
 }
