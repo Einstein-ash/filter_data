@@ -16,6 +16,14 @@
   color: #333;
 }
 
+.verify_icon{
+    background-image: url("../assets//images/verify_icon.jpg");
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+}
+
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -94,3 +102,132 @@
   height: 50px;
   border-radius: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- after and for bottom moduel -------------- */
+
+
+
+
+.bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    height: 20vh;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    animation: slideUp 0.3s ease-out;
+    z-index: 999;
+    /* margin-right: 10px; */
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  
+  .account-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    gap: 12px;
+  }
+  
+  .choose-text {
+    font-weight: 500;
+    margin-bottom: 4px;
+     color : rgb(35, 34, 34);
+  }
+
+  .sbi_logo{
+    background-image: url("../assets//images//sbi_logo.png");
+    background-size: contain;
+    height: 30px;
+    width: 40px;
+    border : 1px solid rgb(199, 199, 199);
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  
+  .bank_name_bottom_module{
+    color : rgb(35, 34, 34);
+    font-weight: 500;
+    font : 120px;
+  }
+
+  .check_now_balance{
+    color : rgb(99, 99, 235)
+  }
+
+  .account-card {
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-direction: column; */
+    align-items: center;
+  }
+  
+  .bank-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bank-info p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .bank-info a {
+    font-size: 12px;
+    color: #2962ff;
+    text-decoration: none;
+  }
+  
+  .pay_button {
+    background-color: #2962ff;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius : 24px 24px 24px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right : 25px;
+  }
+  
+  .bottom-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .bottom-logos img {
+    height: 18px;
+    object-fit: contain;
+  }
+  

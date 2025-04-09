@@ -33,7 +33,7 @@ function App() {
 
 
       {/* <Bank/> */}
-      <Scanner/>    
+      {/* <Scanner/>    f */}
       <PaymentUI/>                
     </div>
   );

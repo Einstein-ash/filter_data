@@ -1,44 +1,45 @@
-// import React from "react";
-// import "./PaymentUI.css";
 
-// const PaymentUI = () => {
+// import React from 'react';
+// import './PaymentScreen.css';
+
+// const PaymentScreen = () => {
 //   return (
-//     <div className="payment-container">
-//       {/* Header */}
-//       <div className="header">
-//         <button className="close-btn">✖</button>
-//         <div className="icons">
-//           <span className="info-icon">❗</span>
-//           <span className="menu-icon">⋮</span>
+//     <div className="screen">
+//       <div className="top-icons">
+//         <span className="close">✕</span>
+//         <span>
+//         <span className="exclamation">⚠️</span>
+//         <span className="dots">⋮</span>
+//         </span>
+//       </div>
+
+//       <div className="profile-section">
+//         <div className="avatar">Y</div>
+//         <div className="name-info">
+//           <p className="paying-name">Paying <strong>Ashwani Ashwani</strong></p>
+//           <p className="bank-name"> 
+//             <p className='verify_icon'></p>
+//              Banking name: <strong>Ashwani Singh</strong></p>
+//           <p className="upi-info">Paytm · UPI ID: 8824270600@ptsbi</p>
 //         </div>
 //       </div>
 
-//       {/* Recipient Info */}
-//       <div className="recipient-info">
-//         <div className="recipient-avatar">A</div>
-//         <h2>Paying Ashwani </h2>
-//         <p>Banking name: Ashwani Ashwani</p>
-//         <p>Paytm • UPI ID: 8039320538230@ptsbi</p>
+//       <div className="amount-section">
+//         <span className="currency">₹
+//         </span>
+//         <input type="text" className="amount-input" defaultValue="0" />
+
+//         <div className="add-note">Add note</div>
 //       </div>
 
-//       {/* Amount Input */}
-//       <div className="amount-input">
-//         <span className="currency-symbol">₹</span>
-//         <input type="number" placeholder="0" />
+//       <div className="bottom-arrow">
+//         <button className="arrow-button">→</button>
 //       </div>
-
-//       {/* Add Note */}
-//       <div className="add-note">
-//         <p>Add note</p>
-//       </div>
-
-//       {/* Submit Button */}
-//       <button className="submit-btn">➡️</button>
 //     </div>
 //   );
 // };
 
-// export default PaymentUI;
+// export default PaymentScreen;
 
 
 
@@ -51,22 +52,24 @@
 
 
 
-
-
-
-
-
-import React from 'react';
+import React, { useState } from 'react';
 import './PaymentScreen.css';
 
 const PaymentScreen = () => {
+  const [showBottomSheet, setShowBottomSheet] = useState(false);
+
+  const handleArrowClick = () => {
+    setShowBottomSheet(true);
+  };
+
   return (
     <div className="screen">
+      {/* your existing code */}
       <div className="top-icons">
         <span className="close">✕</span>
         <span>
-        <span className="exclamation">⚠️</span>
-        <span className="dots">⋮</span>
+          <span className="exclamation">⚠️</span>
+          <span className="dots">⋮</span>
         </span>
       </div>
 
@@ -74,22 +77,44 @@ const PaymentScreen = () => {
         <div className="avatar">Y</div>
         <div className="name-info">
           <p className="paying-name">Paying <strong>Ashwani Ashwani</strong></p>
-          <p className="bank-name">🏦 Banking name: <strong>Ashwani Singh</strong></p>
+          <p className="bank-name">
+            <p className='verify_icon'></p>
+            Banking name: <strong>Ashwani Singh</strong>
+          </p>
           <p className="upi-info">Paytm · UPI ID: 8824270600@ptsbi</p>
         </div>
       </div>
 
       <div className="amount-section">
-        <span className="currency">₹
-        </span>
+        <span className="currency">₹</span>
         <input type="text" className="amount-input" defaultValue="0" />
-
         <div className="add-note">Add note</div>
       </div>
 
       <div className="bottom-arrow">
-        <button className="arrow-button">→</button>
+        <button className="arrow-button" onClick={handleArrowClick}>→</button>
       </div>
+
+{/* belos is code for payment bmouldule boi----------- */}
+      {showBottomSheet && (
+        <div className="bottom-sheet">
+          <div className="account-option">
+            <p className="choose-text">Choose account to pay with</p>
+            <div className="account-card">
+                <div className="sbi_logo"></div>
+              <div className="bank-info">
+                <p className="bank_name_bottom_module">State Bank of India ••••9035</p>
+                <p>Balance: <span className='check_now_balance'>Check now</span> </p>
+              </div>
+            </div>
+              <button className="pay_button">Pay ₹1</button>
+            <div className="bottom-logos">
+              <img src="https://seeklogo.com/images/I/icici-bank-logo-0F570B76F4-seeklogo.com.png" alt="ICICI" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Unified_Payments_Interface_logo.svg/2560px-Unified_Payments_Interface_logo.svg.png" alt="UPI" />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
