@@ -41,7 +41,11 @@ const PaymentScreen = () => {
 
       <div className="amount-section">
         <span className="currency">₹</span>
-        <input type="text" className="amount-input" defaultValue="0" />
+        <input   type="tel" 
+          inputMode="numeric" 
+          pattern="[0-9]*" 
+          className="amount-input" 
+          defaultValue="0"  />
         <div className="add-note">Add note</div>
       </div>
 
