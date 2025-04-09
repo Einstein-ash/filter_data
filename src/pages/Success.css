@@ -1,0 +1,17 @@
+.success-container {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid black;
+    width: 300px;
+    margin : 20px;
+  }
+  
+  .success-video {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 12px;
+  }
+  

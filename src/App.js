@@ -68,6 +68,7 @@ import Bank from "./pages/Bank.jsx"
 import Scanner from './pages/Scanner.jsx';
 import PaymentUI from './pages/PaymentUI.jsx';
 import PinEntryScreen from './pages/PinInput.jsx';
+import Success from './pages/Success.jsx';
 
 
 
@@ -77,7 +78,8 @@ function App() {
 
       <Router>
       <Routes>
-        <Route path="/" element={<Bank />} />
+        <Route path="/" element={<Success />} />
+        {/* <Route path="/" element={<Bank />} /> */}
         <Route path="/scanner" element={<PaymentUI />} />
         <Route path="/enterPin" element={<PinEntryScreen />} />
       </Routes>
