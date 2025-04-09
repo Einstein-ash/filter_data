@@ -34,7 +34,7 @@ function App() {
 
 
       <Bank/>
-      <Scanner/> 
+      {/* <Scanner/>  */}
       <PaymentUI/>      
       <PinEntryScreen/>          
     </div>
