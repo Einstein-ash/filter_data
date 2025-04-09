@@ -7,6 +7,7 @@ import Card from "./pages/card.jsx"
 import Bank from "./pages/Bank.jsx"
 import Scanner from './pages/Scanner.jsx';
 import PaymentUI from './pages/PaymentUI.jsx';
+import PinEntryScreen from './pages/PinInput.jsx';
 
 
 
@@ -34,7 +35,8 @@ function App() {
 
       {/* <Bank/> */}
       {/* <Scanner/>    f */}
-      <PaymentUI/>                
+      {/* <PaymentUI/>       */}
+      <PinEntryScreen/>          
     </div>
   );
 }

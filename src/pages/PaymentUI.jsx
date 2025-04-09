@@ -54,7 +54,6 @@
 
 import React, { useState } from 'react';
 import './PaymentScreen.css';
-import UPI from '../assets/images/UPI_logo.png';
 
 const PaymentScreen = () => {
   const [showBottomSheet, setShowBottomSheet] = useState(false);

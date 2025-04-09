@@ -216,10 +216,11 @@
   .pay_button {
     background-color: #2962ff;
     color: white;
-    padding: 10px 16px;
+    padding: 5px 8px;
     border: none;
     border-radius : 24px 24px 24px 24px;
-    font-weight: 500;
+    font-size : 20px ;
+    font-weight: 600;
     cursor: pointer;
     margin : 10px;
 
