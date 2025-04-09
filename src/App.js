@@ -6,6 +6,7 @@ import AudioPlayer from "./pages/song_player.jsx"
 import Card from "./pages/card.jsx"
 import Bank from "./pages/Bank.jsx"
 import Scanner from './pages/Scanner.jsx';
+import PaymentUI from './pages/PaymentUI.jsx';
 
 
 
@@ -32,7 +33,8 @@ function App() {
 
 
       {/* <Bank/> */}
-      <Scanner/>                    
+      <Scanner/>    
+      <PaymentUI/>                
     </div>
   );
 }

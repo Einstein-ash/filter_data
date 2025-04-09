@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.screen {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+  height: 100vh;
+  padding: 16px;
+  position: relative;
+}
+
+.top-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-size: 20px;
+  color: #333;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.name-info {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.name-info strong {
+  font-weight: 500;
+}
+
+.bank-name {
+  color: #4caf50;
+}
+
+.amount-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.currency {
+  font-size: 36px;
+  vertical-align: middle;
+  color : black;
+
+}
+
+.amount-input {
+  font-size: 60px;
+  border: none;
+  text-align: center;
+  background: transparent;
+  outline: none;
+  width: 160px;
+}
+
+.add-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.bottom-arrow {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
+
+.arrow-button {
+  background-color: #2962ff;
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
