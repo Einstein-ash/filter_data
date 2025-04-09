@@ -1,11 +1,16 @@
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './PinEntryScreen.css';
 
 const PinEntryScreen = () => {
 
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const qrText = location.state?.qrText;
+    const amountInput = location.state?.amountInput;
+    const banking_name = location.state?.banking_name;
 
   const [pin, setPin] = useState([]);
   const [showNumpad, setShowNumpad] = useState(false);
@@ -41,8 +46,8 @@ const PinEntryScreen = () => {
           <p className="label">Sending:</p>
         </div>
         <div className="right">
-          <p className="recipient">GARV BHATIA</p>
-          <p className="amount">₹ 1.00</p>
+          <p className="recipient">{banking_name}</p>
+          <p className="amount">₹ {amountInput}.00</p>
         </div>
       </div>
 
@@ -58,7 +63,7 @@ const PinEntryScreen = () => {
 
       <div className="warning-box">
         <span className="cicular_warning_avatar">!</span>
-        <p>You are transferring money from your account to <strong>GARV BHATIA</strong></p>
+        <p>You are transferring money from your account to <strong>{banking_name}</strong></p>
       </div>
 
       {showNumpad && (

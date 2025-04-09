@@ -7,6 +7,7 @@ const PaymentScreen = () => {
   const location = useLocation();
   
   const qrText = location.state?.qrText;
+  let name = "";
 
 
   const [showBottomSheet, setShowBottomSheet] = useState(false);
@@ -18,6 +19,8 @@ const PaymentScreen = () => {
     banking_name: "",
     upi_id: "",
   });
+
+
 
   
   console.log("qr text in payment page ----------");
@@ -60,7 +63,13 @@ const PaymentScreen = () => {
   };
 
   const handlePayClick = () => {
-    navigate("/enterPin");
+    navigate("/enterPin" , {
+      state: {
+        amountInput,
+        qrText,
+        banking_name : userData.banking_name
+      }
+    });
   };
 
   const handleArrowClick = () => {
