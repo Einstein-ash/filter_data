@@ -1,7 +1,7 @@
 .main_container{
     /* border : 2px solid black; */
     /* margin : 10px 10px; */
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     /* margin-left : 25%; */
     background-image:  url(".././assets//images/home_page.jpg");
@@ -11,7 +11,7 @@
 }
 
 .home2_image{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background-image:  url(".././assets//images/home2.jpg");
     background-size:contain ;
@@ -36,6 +36,6 @@
     width: 100px;
     float: left;
     position : relative;
-    top : 260px;
-    left : 10px;
+    top : 280px;
+    left : 20px;
 }

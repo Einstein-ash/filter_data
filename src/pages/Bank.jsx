@@ -28,28 +28,15 @@
 
 
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './bankCss.css';
 
 const Bank = () => {
-  const videoRef = useRef(null);
 
-  useEffect(() => {
-    // Access the camera
-    navigator.mediaDevices.getUserMedia({ video: true })
-      .then(stream => {
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-        }
-      })
-      .catch(err => {
-        console.error("Camera access denied:", err);
-      });
-  }, []);
 
   return (
     <div>
-      <div>Name - Abhi nhi aa rha kuch dimaag mai</div>
+      {/* <div>Name - Abhi nhi aa rha kuch dimaag mai</div> */}
 
       <div className="main_container">
         <div className="scanner_box">
