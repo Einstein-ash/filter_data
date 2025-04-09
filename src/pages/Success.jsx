@@ -53,13 +53,13 @@ const Success = () => {
       console.log("Fetched finally");
       setSuccessVid(url);
   
-      const audio = new Audio(SuccessAudio);
-      audio.play();
-
+      
       setTimeout(() => {
-        setMoveUp(true);
-      }, 3000);
-
+          setMoveUp(true);
+        }, 3000);
+        
+        const audio = new Audio(SuccessAudio);
+        audio.play();
   
     } catch (error) {
       console.error("Error fetching video:", error);

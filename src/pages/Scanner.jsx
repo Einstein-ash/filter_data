@@ -1,57 +1,12 @@
-// import React, { useRef, useEffect } from 'react';
-// import './scannerCss.css';
-
-// const Scanner = () => {
-//   const videoRef = useRef(null);
-
-//   useEffect(() => {
-//     const startCamera = async () => {
-//       try {
-//         const stream = await navigator.mediaDevices.getUserMedia({
-//           video: {
-//             facingMode: { ideal: 'environment' } // back cam
-//           },
-//           audio: false
-//         });
-
-//         if (videoRef.current) {
-//           videoRef.current.srcObject = stream;
-//         }
-//       } catch (error) {
-//         console.error("Camera error:", error);
-//         alert("Please allow camera access in your mobile browser settings.");
-//       }
-//     };
-
-//     startCamera();
-//   }, []);
-
-//   return (
-//     <div className="main_scanner_container">
-//       <video
-//         ref={videoRef}
-//         autoPlay
-//         playsInline
-//         muted
-//         className="full_screen_video"
-//       />
-
-//       <div className="scanner_black_shadow_"></div>
-//     </div>
-//   );
-// };
-
-// export default Scanner;
-
-
-
-
-
 import React, { useRef, useEffect, useState } from 'react';
-import jsQR from 'jsqr';
+import { useNavigate } from 'react-router-dom';
+
 import './scannerCss.css';
 
 const Scanner = () => {
+
+  const navigate = useNavigate();
+
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const [qrResult, setQrResult] = useState("");
@@ -105,6 +60,16 @@ const Scanner = () => {
         if (qrText) {
           setQrResult(qrText);
           console.log("Scanned from server:", qrText);
+
+          setTimeout(() => {
+            navigate('/payment', {
+              state: {
+                qrText
+              }
+            });
+            
+          }, 1000); // delay of 1 second
+
         } else {
           alert("QR not found by server.");
         }
@@ -113,7 +78,7 @@ const Scanner = () => {
       }
     }, 'image/png');
   };
-  
+
 
   return (
     <div className="main_scanner_container" onClick={handleScreenClick}>
@@ -135,3 +100,10 @@ const Scanner = () => {
 };
 
 export default Scanner;
+
+
+
+// upi://pay?pa=ashwanisingh46572-1@oksbi&pn=Einstein%20Ash&aid=uGICAgIDtloiwLA
+// upi://pay?pa=harshbansal1717@okicici&pn=Harsh%20Bansal&aid=uGICAgIDX2sG3DQ
+// upi://pay?pa=9599170096@ptsbi&pn=Sumit%20%20Kumar
+// upi://pay?pa=sujalmittal2000@oksbi&pn=Sujal&aid=uGICAgMC0w4jvRg

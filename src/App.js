@@ -79,9 +79,10 @@ function App() {
       <Router>
       <Routes>
         {/* <Route path="/" element={<Success />} /> */}
-        <Route path="/" element={<Scanner />} />
-        {/* <Route path="/" element={<Bank />} /> */}
-        <Route path="/scanner" element={<PaymentUI />} />
+        {/* <Route path="/" element={<Scanner />} /> */}
+        <Route path="/" element={<Bank />} />
+        <Route path="/scanner" element={<Scanner />} />
+        <Route path="/payment" element={<PaymentUI />} />
         <Route path="/enterPin" element={<PinEntryScreen />} />
         <Route path="/success" element={<Success />} />
       </Routes>
