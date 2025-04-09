@@ -1,62 +1,16 @@
-
-// import React from 'react';
-// import './PaymentScreen.css';
-
-// const PaymentScreen = () => {
-//   return (
-//     <div className="screen">
-//       <div className="top-icons">
-//         <span className="close">✕</span>
-//         <span>
-//         <span className="exclamation">⚠️</span>
-//         <span className="dots">⋮</span>
-//         </span>
-//       </div>
-
-//       <div className="profile-section">
-//         <div className="avatar">Y</div>
-//         <div className="name-info">
-//           <p className="paying-name">Paying <strong>Ashwani Ashwani</strong></p>
-//           <p className="bank-name"> 
-//             <p className='verify_icon'></p>
-//              Banking name: <strong>Ashwani Singh</strong></p>
-//           <p className="upi-info">Paytm · UPI ID: 8824270600@ptsbi</p>
-//         </div>
-//       </div>
-
-//       <div className="amount-section">
-//         <span className="currency">₹
-//         </span>
-//         <input type="text" className="amount-input" defaultValue="0" />
-
-//         <div className="add-note">Add note</div>
-//       </div>
-
-//       <div className="bottom-arrow">
-//         <button className="arrow-button">→</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default PaymentScreen;
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PaymentScreen.css';
 
 const PaymentScreen = () => {
   const [showBottomSheet, setShowBottomSheet] = useState(false);
+
+    const navigate = useNavigate();
+  
+    const handlePayClick = () => {
+      navigate('/enterPin'); 
+    };
+  
 
   const handleArrowClick = () => {
     setShowBottomSheet(true);
@@ -107,7 +61,7 @@ const PaymentScreen = () => {
                 <p className='payment_ui_balance'>Balance: <span className='check_now_balance'>Check now</span> </p>
               </div>
             </div>
-              <button className="pay_button">Pay ₹1</button>
+              <button className="pay_button" onClick={handlePayClick}>Pay ₹1</button>
             <div className="bottom-logos">
                 <p className='axis_logo'></p> 
                 <p className='vertical_line'></p>

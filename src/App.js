@@ -79,6 +79,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Bank />} />
         <Route path="/scanner" element={<PaymentUI />} />
+        <Route path="/enterPin" element={<PinEntryScreen />} />
       </Routes>
       </Router>
   );
