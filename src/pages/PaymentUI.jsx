@@ -100,7 +100,7 @@ useEffect(() => {
       </div>
 
       <div className="profile-section">
-        <div className="avatar">A</div>
+        <div className="avatar">{userData.name.charAt(0)}</div>
         <div className="name-info">
           <p className="paying-name">
             Paying <strong>{userData.name}</strong>
