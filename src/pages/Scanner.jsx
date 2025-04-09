@@ -7,10 +7,9 @@ const Scanner = () => {
   useEffect(() => {
     const startCamera = async () => {
       try {
-        // Ask for rear camera (most common for scanning)
         const stream = await navigator.mediaDevices.getUserMedia({
           video: {
-            facingMode: { ideal: 'environment' } // rear cam on mobile
+            facingMode: { ideal: 'environment' } // back cam
           },
           audio: false
         });
@@ -34,8 +33,10 @@ const Scanner = () => {
         autoPlay
         playsInline
         muted
-        style={{ width: '100%', height: '100%' }}
+        className="full_screen_video"
       />
+
+      <div className="scanner_black_shadow_"></div>
     </div>
   );
 };
