@@ -1,82 +1,107 @@
-.pin-screen {
-    padding-top : 20px;
+
+   .pin-screen {
+    padding-top : 10px;
     width: 100%;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: white;
     display: flex;
     flex-direction: column;
-    /* padding: 16px; */
     box-sizing: border-box;
     position: relative;
-  }
+}
   
-  .header {
+.header {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    padding : 15px ;
-    font-weight: 500;
-  }
+    padding : 5px 10px 0px 10px;
+    font-weight: 400;
+    color : black;
+}
+
+.pin_input_bank_info{
+  font-size : 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pin_input_bank_info .pin_input_bank_name{
+  font-size : 15px;
+  font-weight: 200;
+}
+
+
   
-  .pin_input_upi_logo {
+.pin_input_upi_logo {
     background-image: url("../assets/images/UPI_logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 30px;
     width: 100px;
     margin-right: 10px;
-  }
+}
   
-  .send-info {
+.send-info {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 10px 0px 0px 0px;
     font-size: 16px;
-    background-color: #979797;
-    padding: 5px 20px 2px 5px;
-  }
+    background-color: #c1c1c163;
+    padding: 5px 20px 8px 20px;
+}
   
-  .label {
+.label {
     color: #252525;
-    margin-bottom: 8px;
-  }
+   
+}
   
-  .recipient {
+.recipient {
     font-weight: 600;
     text-align: right;
     color: #252525;
-  }
+}
   
-  .amount {
+.amount {
     font-weight: bold;
     color: #000;
     text-align: right;
-  }
+}
   
-  .enter-pin {
+.enter-pin {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 10px;
-  }
+}
   
-  .pin-boxes {
+.pin-boxes {
     display: flex;
     justify-content: space-between;
     padding: 35px 10px 100px 10px;
-  }
+}
   
-  .pin-box {
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    margin: 0 5px;
-  }
+.pin-box {
+
+    width: 40px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    
+}
   
-  .warning-box {
+.pin-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(101, 100, 100);
+    margin-top : 18px;
+}
+  
+.warning-box {
     background-color: #ffe8b5;
-    /* border-radius: 6px; */
     padding: 10px;
     display: flex;
     align-items: center;
@@ -85,27 +110,26 @@
     border: none;
     border-radius: 10px 10px;
     margin: 10px 20px  10px 20px;
-  }
+}
   
-  .warning-box .cicular_warning_avatar {
-        width: 35px;
-        height: 30px;
-        background-color: #ffa012;
-        color: white;
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        margin-right: 10px;
-
-  }
+.warning-box .cicular_warning_avatar {
+    width: 35px;
+    height: 30px;
+    background-color: #ffa012;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
   
-  .spacer {
+.spacer {
     flex-grow: 1;
-  }
+}
   
-  .numpad {
+.numpad {
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -117,21 +141,20 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     box-sizing: border-box;
-  }
+}
   
-  .num-btn {
+.num-btn {
     font-size: 22px;
     padding: 15px;
     border: none;
     background-color: transparent;
     color: #0b0b0b;
-  }
+}
   
-  .num-btn.submit {
+.num-btn.submit {
     color: white;
     background-color: #1a237e;
     border-radius: 50%;
     width: 70px;
     margin-left : 25px;
-  }
-  
+}
