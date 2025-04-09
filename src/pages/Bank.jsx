@@ -8,6 +8,8 @@ const Bank = () => {
 
         <div className='main_container'>
         </div>
+        <div className="home2_image"></div>
+        <div className="home3_image"></div>
       
     </div>
   )
