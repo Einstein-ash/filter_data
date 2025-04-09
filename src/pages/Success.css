@@ -1,10 +1,32 @@
-.success-container {
+/* .success-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid black;
+
+  } */
+
+
+
+
+
+
+
+  .success-container {
     background-color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border : 1px solid black; */
-    /* width: 300px; */
-    margin : 20px;
+    overflow: hidden;
   }
+  
+  .lottie-wrapper {
+    transition: transform 1s ease-in-out;
+  }
+  
+  .lottie-wrapper.move-up {
+    transform: translateY(-250px); /* move up smoothly */
+  }
+  
