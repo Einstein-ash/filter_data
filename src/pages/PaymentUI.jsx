@@ -80,9 +80,9 @@ const PaymentScreen = () => {
           <p className="paying-name">Paying <strong>Ashwani Ashwani</strong></p>
           <p className="bank-name">
             <p className='verify_icon'></p>
-            Banking name: <strong>Ashwani Singh</strong>
+            Banking name : <strong> &nbsp;Ashwani Singh</strong>
           </p>
-          <p className="upi-info">Paytm · UPI ID: 8824270600@ptsbi</p>
+          <p className="upi-info">UPI ID: 8824270600@ptsbi</p>
         </div>
       </div>
 
