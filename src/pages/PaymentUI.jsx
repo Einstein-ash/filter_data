@@ -7,12 +7,11 @@ const PaymentScreen = () => {
   const location = useLocation();
   
   const qrText = location.state?.qrText;
-  let name = "";
 
 
   const [showBottomSheet, setShowBottomSheet] = useState(false);
   const [amountInput, setAmountInput] = useState("0");
-  const [showWarning, setShowWarning] = useState(false);
+  // const [showWarning, setShowWarning] = useState(false);
 
   const [userData, setUserData] = useState({
     name: "",
@@ -75,7 +74,7 @@ const PaymentScreen = () => {
   const handleArrowClick = () => {
     setShowBottomSheet(true);
   };
-
+// 
 
 
   
