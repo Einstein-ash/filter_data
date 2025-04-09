@@ -20,7 +20,7 @@
   }
   
   .scanner_black_shadow_ {
-    position: fixed; 
+    position :fixed; 
     top: 0;
     left: 0;
     /* z-index: 11; */
