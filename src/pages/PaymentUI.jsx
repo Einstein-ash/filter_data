@@ -3,9 +3,37 @@ import { useNavigate } from 'react-router-dom';
 import './PaymentScreen.css';
 
 const PaymentScreen = () => {
-  const [showBottomSheet, setShowBottomSheet] = useState(false);
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+
+  const [showBottomSheet, setShowBottomSheet] = useState(false);
+  const [amountInput, setAmountInput] = useState("0");
+  const [showWarning, setShowWarning] = useState(false);
+  
+
+  const formatAmount = (numStr) => {
+    const x = numStr.replace(/[^\d]/g, '').replace(/,/g, ''); // keep digits onlu 
+    if (x.length <= 3) return x;
+    const lastThree = x.slice(-3);
+    const rest = x.slice(0, -3);
+    return rest.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + "," + lastThree;
+  };
+  
+  
+
+  const handleInputChange = (e) => {
+
+    let value = formatAmount(e.target.value);
+  
+    if (/^\d*$/.test(value)) {
+      value = value.replace(/\D/g, '');              
+      value = value.replace(/^0+/, '');             
+      setAmountInput(value || "0");
+    }
+
+    setAmountInput(value);
+  };
+  
   
     const handlePayClick = () => {
       navigate('/enterPin'); 
@@ -18,7 +46,6 @@ const PaymentScreen = () => {
 
   return (
     <div className="screen">
-      {/* your existing code */}
       <div className="top-icons">
         <span className="close">✕</span>
         <span>
@@ -41,11 +68,18 @@ const PaymentScreen = () => {
 
       <div className="amount-section">
         <span className="currency">₹</span>
-        <input   type="tel" 
-          inputMode="numeric" 
-          pattern="[0-9]*" 
-          className="amount-input" 
-          defaultValue="0"  />
+
+        <input
+          type="tel"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          className="amount-input"
+          name="amount_input"
+          value={formatAmount(amountInput)}
+          onChange={handleInputChange}
+        />
+
+
         <div className="add-note">Add note</div>
       </div>
 
@@ -65,7 +99,7 @@ const PaymentScreen = () => {
                 <p className='payment_ui_balance'>Balance: <span className='check_now_balance'>Check now</span> </p>
               </div>
             </div>
-              <button className="pay_button" onClick={handlePayClick}>Pay ₹1</button>
+              <button className="pay_button" onClick={handlePayClick}>Pay ₹ {amountInput}</button>
             <div className="bottom-logos">
                 <p className='axis_logo'></p> 
                 <p className='vertical_line'></p>
