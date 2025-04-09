@@ -157,8 +157,9 @@
   
   .choose-text {
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
      color : rgb(35, 34, 34);
+     padding-left : 20px;
   }
 
   .account-option {
@@ -188,6 +189,9 @@
     margin-right: 10px;
   }
 
+  .payment_ui_bank_info{
+    padding-left : 10px;
+  }
   
   /* .bank-info {
     display: flex;
@@ -197,13 +201,21 @@
   .bank_name_bottom_module{
     color : rgb(35, 34, 34);
     font-weight: 500;
-    font : 120px;
+    font-size: 16px;
+  }
+
+  .payment_ui_balance{
+      font-size: 14px;
+      color : rgb(78, 78, 78);
+      margin-top : 3.5px;
   }
 
   .check_now_balance{
-    color : rgb(99, 99, 235);
+    color : rgb(61, 61, 221);
     cursor : pointer;
     padding-top : 5px;
+    font-weight: 300;
+    font-size: 14px;
   }
 
   

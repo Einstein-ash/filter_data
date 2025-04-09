@@ -102,9 +102,9 @@ const PaymentScreen = () => {
             <p className="choose-text">Choose account to pay with</p>
             <div className="account-card">
                 <div className="sbi_logo"></div>
-              <div className="bank-info">
+              <div className="payment_ui_bank_info">
                 <p className="bank_name_bottom_module">State Bank of India ••••9035</p>
-                <p>Balance: <span className='check_now_balance'>Check now</span> </p>
+                <p className='payment_ui_balance'>Balance: <span className='check_now_balance'>Check now</span> </p>
               </div>
             </div>
               <button className="pay_button">Pay ₹1</button>
