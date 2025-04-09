@@ -1,35 +1,3 @@
-// import React from 'react';
-// import './Success.css';
-// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
-// const Success = () => {
-//   return (
-//     <div className="success-container">
-
-//     <DotLottieReact
-//       src="https://lottie.host/fc5081aa-982a-485d-a6b1-2f5aafeb407e/ixBHyon6J5.lottie"
-//       loop
-//       autoplay
-//     />
-      
-//     </div>
-    
-//   );
-// };
-
-// export default Success;
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useEffect, useState } from 'react';
 import './Success.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
@@ -47,19 +15,19 @@ const Success = () => {
       if (!res.ok) {
         throw new Error("Failed to fetch video");
       }
-  
+      
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       console.log("Fetched finally");
       setSuccessVid(url);
-  
       
-      setTimeout(() => {
-          setMoveUp(true);
-        }, 3000);
+    //   const audio = new Audio(SuccessAudio);
+    //   audio.play();
+      
+    //   setTimeout(() => {
+    //       setMoveUp(true);
+    //     }, 3000);
         
-        const audio = new Audio(SuccessAudio);
-        audio.play();
   
     } catch (error) {
       console.error("Error fetching video:", error);
@@ -70,7 +38,19 @@ const Success = () => {
 
   useEffect(() => {
     GetVideo();
+
   }, []);
+
+  useEffect(() => {
+    if (!successVid) return;
+
+    const audio = new Audio(SuccessAudio);
+    audio.play();
+
+    const timeout = setTimeout(() => setMoveUp(true), 3000);
+
+    return () => clearTimeout(timeout);
+  }, [successVid]);
   
 
   return (
