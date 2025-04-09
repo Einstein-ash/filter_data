@@ -1,0 +1,19 @@
+.main_scanner_container{
+
+    border : 1px solid black;
+    margin : 10px 10px ;
+    height: 100vh;
+
+
+}
+
+
+.scanner_box {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+  }
+  

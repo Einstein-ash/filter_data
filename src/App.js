@@ -5,6 +5,7 @@ import Hero from "./pages/hero.jsx"
 import AudioPlayer from "./pages/song_player.jsx"
 import Card from "./pages/card.jsx"
 import Bank from "./pages/Bank.jsx"
+import Scanner from './pages/Scanner.jsx';
 
 
 
@@ -30,7 +31,8 @@ function App() {
       /> */}
 
 
-      <Bank/>
+      {/* <Bank/> */}
+      <Scanner/>                    
     </div>
   );
 }

@@ -25,3 +25,17 @@
     background-size:contain ;
     background-repeat: no-repeat;
 }
+
+/*  ------------SCanner is here------------ */
+
+
+.scanner_box{
+
+    border : 1px solid black;
+    height: 100px;
+    width: 100px;
+    float: left;
+    position : relative;
+    top : 260px;
+    left : 10px;
+}
