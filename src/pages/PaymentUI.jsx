@@ -54,6 +54,7 @@
 
 import React, { useState } from 'react';
 import './PaymentScreen.css';
+import UPI from '../assets/images/UPI_logo.png';
 
 const PaymentScreen = () => {
   const [showBottomSheet, setShowBottomSheet] = useState(false);
@@ -74,7 +75,7 @@ const PaymentScreen = () => {
       </div>
 
       <div className="profile-section">
-        <div className="avatar">Y</div>
+        <div className="avatar">A</div>
         <div className="name-info">
           <p className="paying-name">Paying <strong>Ashwani Ashwani</strong></p>
           <p className="bank-name">
@@ -109,8 +110,10 @@ const PaymentScreen = () => {
             </div>
               <button className="pay_button">Pay ₹1</button>
             <div className="bottom-logos">
-              <img src="https://seeklogo.com/images/I/icici-bank-logo-0F570B76F4-seeklogo.com.png" alt="ICICI" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Unified_Payments_Interface_logo.svg/2560px-Unified_Payments_Interface_logo.svg.png" alt="UPI" />
+                <p className='axis_logo'></p> 
+                <p className='vertical_line'></p>
+                <p className='upi_logo'></p>
+            
             </div>
           </div>
         </div>

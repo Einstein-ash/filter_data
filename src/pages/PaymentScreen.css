@@ -127,13 +127,13 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 98%;
+    width: 100%;
     height: 20vh;
     background-color: #fff;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
-    padding: 16px;
+    padding-top: 16px;
     animation: slideUp 0.3s ease-out;
     z-index: 999;
     /* margin-right: 10px; */
@@ -148,6 +148,12 @@
     }
   }
   
+  .choose-text {
+    font-weight: 500;
+    margin-bottom: 4px;
+     color : rgb(35, 34, 34);
+  }
+
   .account-option {
     display: flex;
     flex-direction: column;
@@ -156,11 +162,13 @@
     gap: 12px;
   }
   
-  .choose-text {
-    font-weight: 500;
-    margin-bottom: 4px;
-     color : rgb(35, 34, 34);
+  .account-card {
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-direction: column; */
+    align-items: center;
   }
+  
 
   .sbi_logo{
     background-image: url("../assets//images//sbi_logo.png");
@@ -174,6 +182,11 @@
   }
 
   
+  /* .bank-info {
+    display: flex;
+    flex-direction: column;
+  } */
+
   .bank_name_bottom_module{
     color : rgb(35, 34, 34);
     font-weight: 500;
@@ -181,32 +194,17 @@
   }
 
   .check_now_balance{
-    color : rgb(99, 99, 235)
+    color : rgb(99, 99, 235);
+    cursor : pointer;
+    padding-top : 5px;
   }
 
-  .account-card {
-    display: flex;
-    /* justify-content: space-around; */
-    /* flex-direction: column; */
-    align-items: center;
-  }
-  
-  .bank-info {
-    display: flex;
-    flex-direction: column;
-  }
   
   .bank-info p {
-    margin: 0;
     font-size: 14px;
     font-weight: 500;
   }
   
-  .bank-info a {
-    font-size: 12px;
-    color: #2962ff;
-    text-decoration: none;
-  }
   
   .pay_button {
     background-color: #2962ff;
@@ -216,18 +214,45 @@
     border-radius : 24px 24px 24px 24px;
     font-weight: 500;
     cursor: pointer;
-    margin-right : 25px;
+    margin : 10px;
+
   }
   
   .bottom-logos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-top: 8px;
+    /* margin-top: 8px; */
+  }
+
+
+  .bottom-logos .axis_logo {
+
+    background-image: url("../assets/images/ax2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 80px;
+    /* border: 1px solid red; */
+  }
+
+  .bottom-logos .vertical_line {
+
+        border: 1px solid grey;
+        height: 30px;
+        margin : 0px 10px 0px 10px;
+  }
+
+
+  .bottom-logos .upi_logo {
+
+    background-image: url("../assets/images/UPI_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 100px;
+    /* border: 1px solid red; */
   }
   
-  .bottom-logos img {
-    height: 18px;
-    object-fit: contain;
-  }
+
   
