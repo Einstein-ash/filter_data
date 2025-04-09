@@ -2,7 +2,7 @@
     /* border : 2px solid black; */
     /* margin : 10px 10px; */
     height: 90vh;
-    /* width: 50%; */
+    width: 100%;
     /* margin-left : 25%; */
     background-image:  url(".././assets//images/home_page.jpg");
     background-size:contain ;
@@ -11,6 +11,7 @@
 
 .home2_image{
     height: 90vh;
+    width: 100%;
     background-image:  url(".././assets//images/home2.jpg");
     background-size:contain ;
     background-repeat: no-repeat;
@@ -18,6 +19,7 @@
 
 .home3_image{
     height: 90vh;
+    width: 100%;
     background-image:  url(".././assets//images/home3.jpg");
     background-size:contain ;
     background-repeat: no-repeat;
