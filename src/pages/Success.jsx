@@ -75,7 +75,7 @@ const Success = () => {
         />
 
         <div>
-          <h1> ₹ {amountInput}.00</h1>
+          <h1 className='success_amount'> ₹ {amountInput}.00</h1>
           <p>Paid to {banking_name}</p>
 
           <div className='empty_space_success'></div>

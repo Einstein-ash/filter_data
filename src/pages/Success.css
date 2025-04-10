@@ -18,8 +18,11 @@
 
   .empty_succes{
     height: 20px;
-    border : 1px solid red;
+    /* border : 1px solid red; */
 
   }
 
-  
+
+  .success_amount{
+    font: 400;
+  }
