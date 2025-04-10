@@ -78,7 +78,7 @@ function App() {
 
       <Router>
       <Routes>
-        {/* <Route path="/" element={<Success />} /> */}
+        <Route path="/" element={<Success />} />
         {/* <Route path="/" element={<Scanner />} /> */}
         <Route path="/" element={<Bank />} />
         <Route path="/scanner" element={<Scanner />} />

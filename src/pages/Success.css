@@ -1,36 +1,54 @@
-.success-container {
+.success_container {
     background-color: white;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    overflow: hidden;
+
+  }
+
+  .empty_container_above_success{
+    height: 35vh;
   }
   
   .lottie-wrapper {
+    /* border : 1px solid red; */
+  }
+
+
+ .move-up{
     transition: transform 1s ease-in-out;
   }
   
-  .lottie-wrapper.move-up {
-    transform: translateY(-200px) scale(1.3); /* move up smoothly */
+  .lottie-wrapper.move-up_success_logo {
+    transition: transform 1s ease-in-out;
+    transform:  translateY(-1px)   scale(1.3); 
   }
 
-  .success_data_show{
+  .move-up {
+    transform: translateY(-200px) ; 
+  }
+
+  .success_data{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+
+    /* column-gap: 3px; */
+    text-align: center;
+    /* border : 1px solid black; */
 
   }
   
 
   .empty_succes{
     height: 20px;
-    /* border : 1px solid red; */
-
+    border : 1px solid red;
+                              
   }
 
 
   .success_amount{
-    font: 400;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
   }

@@ -57,8 +57,8 @@ const Success = () => {
   useEffect(() => {
     if (!successVid) return;
 
-    const audio = new Audio(SuccessAudio);
-    audio.play();
+    // const audio = new Audio(SuccessAudio);
+    // audio.play();
 
     const timeout = setTimeout(() => setMoveUp(true), 3000);
 
@@ -67,15 +67,19 @@ const Success = () => {
   
 
   return (
-    <div className="success-container">
-      <div className={`lottie-wrapper ${moveUp ? 'move-up' : ''}`}>
-        <DotLottieReact
-          src={successVid}
-          autoplay
-        />
+    <div className="success_container">
 
-        <div className='success_data_show'>
-          <h1 className='success_amount'> ₹ {amountInput}.00</h1>
+      <div className='empty_container_above_success'></div>
+      <div className={` ${moveUp ? 'move-up' : ''}`}>
+        <div className={`lottie-wrapper  ${moveUp ? 'move-up_success_logo' : ''}`}>
+            <DotLottieReact
+              src={successVid}
+              autoplay
+            />
+          </div>
+
+        <div className='success_data'>
+          <p className='success_amount'> ₹ {amountInput}.00</p>
           <p>Paid to {banking_name}</p>
 
           <div className='empty_space_success'></div>
