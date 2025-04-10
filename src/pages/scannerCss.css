@@ -9,6 +9,7 @@
     z-index: 10; 
     overflow: hidden;
   }
+
   .full_screen_video {
     object-fit: cover;
     width: 100vw;
@@ -18,17 +19,67 @@
     left: 0;
     z-index: 10;
   }
-  
-  .scanner_black_shadow_ {
-    /* position :fixed;  */
+
+
+
+
+  .scanner_black_shadow_up_left {
+    position :fixed; 
     top: 0;
     left: 0;
+    
     /* z-index: 11; */
-    height: 100vh;
-    width: 100vw;
-    /* background-color: rgba(0, 0, 0, 0.699); */
+    height: 50vh;
+    width: 20vw;
+    background-color: rgba(0, 0, 0, 0.699);
   }
 
   
+  .scanner_black_shadow_up_middle {
+    position :fixed; 
+    top: 0;
+    left: 20vw;
+    
+    /* z-index: 11; */
+    height: 20vh;
+    width: 60vw;
+    background-color: rgba(0, 0, 0, 0.699);
+  }
+
+
+  /* .scanner_black_shadow_middle_border {
+    position :fixed; 
+    top: 20vh;
+    left: 20vw;
+    
+ 
+    height: 30vh;
+    width: 60vw;
+    background-color: rgba(0, 0, 0, 0.699);
+  } */
+
+
+  .scanner_black_shadow_up_right {
+    position :fixed; 
+    top: 0;
+    right: 0;
+    
+    /* z-index: 11; */
+    height: 50vh;
+    width: 20vw;
+    background-color: rgba(0, 0, 0, 0.699);
+  }
+
+
+  .scanner_black_shadow_bottom {
+    position :fixed; 
+    top: 50vh;
+    left: 0;
+    
+    /* z-index: 11; */
+    height: 50vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.699);
+  }
 
 

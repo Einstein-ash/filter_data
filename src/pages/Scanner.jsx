@@ -304,11 +304,15 @@ const Scanner = () => {
         className="full_screen_video"
       />
       <canvas ref={canvasRef} style={{ display: 'none' }} />
-      <div className="scanner_black_shadow_"></div>
 
-      {qrResult && (
-        <p className="qr-result-display">Scanned: {qrResult}</p>
-      )}
+      <div className="scanner_black_shadow_up_left"></div>
+      <div className="scanner_black_shadow_up_middle"></div>
+      {/*middle border wla part  */}
+      <div className="scanner_black_shadow_middle_border"></div>  
+
+      <div className="scanner_black_shadow_up_right"></div>
+      <div className="scanner_black_shadow_bottom"></div>
+
     </div>
   );
 };
