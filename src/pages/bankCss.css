@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100%;
     /* margin-left : 25%; */
-    background-image:  url(".././assets//images/home_page.jpg");
+    background-image:  url(".././assets//images/home1_a_p.png");
     background-size:contain ;
     background-repeat: no-repeat;
 
@@ -13,7 +13,7 @@
 .home2_image{
     height: 100vh;
     width: 100%;
-    background-image:  url(".././assets//images/home2.jpg");
+    background-image:  url(".././assets//images/home2_a_p.png");
     background-size:contain ;
     background-repeat: no-repeat;
 }
@@ -21,7 +21,7 @@
 .home3_image{
     height: 90vh;
     width: 100%;
-    background-image:  url(".././assets//images/home3.jpg");
+    background-image:  url(".././assets//images/home3_a_p.png");
     background-size:contain ;
     background-repeat: no-repeat;
 }
