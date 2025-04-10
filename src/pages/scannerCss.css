@@ -107,6 +107,10 @@
   font-size: 20px;
 }
 
+.scanner_footer_dash{
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
 
 .scanner_footer{
   position : absolute;
