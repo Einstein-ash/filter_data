@@ -109,43 +109,43 @@
   
   .corner {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 6px solid transparent;
    
   }
   
   .top-left {
-    top: 1vh;
-    left: 3vw;
+    top: 2vh;
+    left: 4vw;
     border-top-color: #ff6b6b; /* red */
     border-left-color: #ff6b6b;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 30px;
     
   }
   
   .top-right {
-    top: 1vh;
-    right: 3vw;
+    top: 2vh;
+    right: 4vw;
     border-top-color: #ffc107; /* yellow */
     border-right-color: #ffc107;
-    border-top-right-radius: 20px;
+    border-top-right-radius: 30px;
   }
   
   .bottom-left {
-    bottom: 1vh;
-    left: 3vw;
+    bottom: 2vh;
+    left: 4vw;
     border-bottom-color: #4dabf7; /* blue */
     border-left-color: #4dabf7;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 30px;
   }
   
   .bottom-right {
-    bottom: 1vh;
-    right: 3vw;
+    bottom: 2vh;
+    right: 4vw;
     border-bottom-color: #51cf66; /* green */
     border-right-color: #51cf66;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 30px;
   }
   
 
