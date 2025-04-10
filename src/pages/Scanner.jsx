@@ -208,8 +208,7 @@ import { IoMdClose } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaQrcode } from "react-icons/fa";
 import { PiFlashlightBold } from "react-icons/pi";
-import { PiFlashlightLight } from "react-icons/pi";
-import { PiFlashlightRegular } from "react-icons/pi";
+
 
 
 import './scannerCss.css';
@@ -359,8 +358,7 @@ const Scanner = () => {
             <div className="nav-right-icons">
           
                   <PiFlashlightBold  color = {torchOn ? "#000" : "#fff" }className={ ` nav-icon ${torchOn ? 'scanner_torch_on' : ''} `} onClick={toggleFlashlight} />
-                  {/* <PiFlashlightLight className={ ` nav-icon scanner_torch_on ${torchOn ? 'scanner_torch_on' : ''} `} onClick={toggleFlashlight} /> */}
-                  {/* <PiFlashlightRegular className={ ` nav-icon scanner_torch_on ${torchOn ? 'scanner_torch_on' : ''} `} onClick={toggleFlashlight} /> */}
+
 
       
               <FaQrcode className="nav-icon" />
@@ -375,7 +373,15 @@ const Scanner = () => {
       <div className="scanner_black_shadow_up_left"></div>
       <div className="scanner_black_shadow_up_middle"></div>
       {/*middle border wla part  */}
-      <div className="scanner_black_shadow_middle_border"></div> 
+      <div className="scanner_black_shadow_middle_border">
+              <div className="scanner-box">
+                <div className="corner top-left" />
+                <div className="corner top-right" />
+                <div className="corner bottom-left" />
+                <div className="corner bottom-right" />
+              </div>
+        
+        </div> 
 
           <button className="scanner_upload_btn">
             <MdImage className="scanner_upload_icon" />
