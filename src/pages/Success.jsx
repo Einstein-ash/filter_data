@@ -57,8 +57,8 @@ const Success = () => {
   useEffect(() => {
     if (!successVid) return;
 
-    // const audio = new Audio(SuccessAudio);
-    // audio.play();
+    const audio = new Audio(SuccessAudio);
+    audio.play();
 
     const timeout = setTimeout(() => setMoveUp(true), 3000);
 
