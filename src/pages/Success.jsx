@@ -81,7 +81,7 @@ const Success = () => {
           <div className='empty_space_success'></div>
 
           <p className='time_success'></p>
-          <p>UPI transaction ID: random number </p>
+          <p>UPI transaction ID: 509476847561 </p>
 
         </div>
       </div>
