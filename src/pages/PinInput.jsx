@@ -16,6 +16,9 @@ const PinEntryScreen = () => {
   const [showNumpad, setShowNumpad] = useState(false);
 
   const handleNumpadClick = (val) => {
+
+    // if (navigator.vibrate) navigator.vibrate(10); // 10ms light vibration
+
     if (val === 'X') {
       setPin((prev) => prev.slice(0, -1));
     } else if (val === '✔') {
@@ -34,6 +37,7 @@ const PinEntryScreen = () => {
       }
     }); 
   };
+
 
   return (
     <div className="pin-screen">
@@ -87,6 +91,11 @@ const PinEntryScreen = () => {
               >
                 {val}
               </button>
+
+
+
+
+
 
           ))}
         </div>
