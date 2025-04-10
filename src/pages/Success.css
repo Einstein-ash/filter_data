@@ -23,7 +23,7 @@
   
   .lottie-wrapper.move-up_success_logo {
     transition: transform 1s ease-in-out;
-    transform:  translateY(-1px)   scale(1.3); 
+    transform:  translateY(-1px) scale(1.3) ;; 
   }
 
   .move-up {
@@ -33,8 +33,6 @@
   .success_data{
     display: flex;
     flex-direction: column;
-
-    /* column-gap: 3px; */
     align-items: center;
     text-align: center;
     /* border : 1px solid black; */
@@ -113,5 +111,47 @@
     color: white;
     border: none;
     padding: 12px 30px 12px 30px;
+  }
+  
+
+
+
+
+
+
+  .loader-screen {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #1a73e8; /* blue like Google Pay */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .main-content {
+    padding: 20px;
+    text-align: center;
   }
   
