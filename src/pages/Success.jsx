@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import './Success.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import SuccessAudio from '../assets/audio/success_final.mp3';
+import { Share2 } from 'lucide-react';
 
 
 
@@ -107,7 +108,10 @@ const Success = () => {
 
       </div>
         <div className="success_footer">
-          <button className='success_btn_share_ss'>Share screeenshot</button>
+          <button className='success_btn_share_ss'> 
+            <Share2 size={16} style={{ marginRight: '8px',}} />
+  
+            Share screeenshot</button>
           <button className='success_btn_done'>Done</button>
         </div>
     </div>
