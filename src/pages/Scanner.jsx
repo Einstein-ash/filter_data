@@ -204,6 +204,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QrScanner from 'qr-scanner';
 import { MdImage } from "react-icons/md"; 
+import { IoMdClose } from "react-icons/io";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { FaQrcode } from "react-icons/fa";
+import { PiFlashlightBold } from "react-icons/pi";
+
 
 import './scannerCss.css';
 
@@ -336,14 +341,26 @@ const Scanner = () => {
 
   return (
     <div className="main_scanner_container">
-      <video
+      {/* <video
         ref={videoRef}
         autoPlay
         playsInline
         muted
         className="full_screen_video"
-      />
+      /> */}
       <canvas ref={canvasRef} style={{ display: 'none' }} />
+
+      <div className="top-nav-bar">
+      <IoMdClose className="nav-icon" />
+      <div className="nav-right-icons">
+    
+            <PiFlashlightBold className="nav-icon "  onClick={toggleFlashlight} />
+
+ 
+        <FaQrcode className="nav-icon" />
+        <BsThreeDotsVertical className="nav-icon" />
+      </div>
+    </div>
 
       <div className="scanner_black_shadow_up_left"></div>
       <div className="scanner_black_shadow_up_middle"></div>
@@ -362,9 +379,7 @@ const Scanner = () => {
         <p className='scanner_footer_dash'></p>
 
         <p>Scan any QR code to pay</p>
-        <button onClick={toggleFlashlight}>
-      {torchOn ? "Turn Off Flashlight" : "Turn On Flashlight"}
-    </button>
+        <button onClick={toggleFlashlight}> </button>
         <p>Google Pay . PhonePe . Paytm . UPI</p>
       </div>
 
