@@ -379,7 +379,6 @@ const Scanner = () => {
         <p className='scanner_footer_dash'></p>
 
         <p>Scan any QR code to pay</p>
-        <button onClick={toggleFlashlight}> </button>
         <p>Google Pay . PhonePe . Paytm . UPI</p>
       </div>
 
