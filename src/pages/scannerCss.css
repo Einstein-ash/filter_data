@@ -131,6 +131,6 @@
   bottom : 0 ;
   color : white;
   background-color: #303030;
-  border-top-right-radius:10%;
-  border-top-left-radius:10%;
+  border-top-right-radius:20%;
+  border-top-left-radius:20%;
 }
