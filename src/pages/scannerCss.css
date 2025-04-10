@@ -114,7 +114,7 @@
 
 .scanner_footer{
   position : absolute;
-  border : 1px solid #444141;
+  border : 1px solid #303030;
   height: 10vh;
   width: 99vw;
 
@@ -125,7 +125,7 @@
   z-index: 10001;
   bottom : 0 ;
   color : white;
-  background-color: #444141;
+  background-color: #303030;
   border-top-right-radius:10%;
   border-top-left-radius:10%;
 }
