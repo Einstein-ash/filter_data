@@ -1,12 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
+
 import './Success.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import SuccessAudio from '../assets/audio/success_final.mp3';
 
+
+
 const Success = () => {
+
+  const location = useLocation();
+
+  const amountInput = location.state?.amountInput;
+  const banking_name = location.state?.banking_name;
+
   const [moveUp, setMoveUp] = useState(false);
 
   const [successVid, setSuccessVid] = useState("");
+
+
   
   const GetVideo = async () => {
     try {
@@ -60,6 +73,17 @@ const Success = () => {
           src={successVid}
           autoplay
         />
+
+        <div>
+          <h1> ₹ {amountInput}.00</h1>
+          <p>Paid to {banking_name}</p>
+
+          <div className='empty_space_success'></div>
+
+          <p className='time_success'></p>
+          <p>UPI transaction ID: random number </p>
+
+        </div>
       </div>
     </div>
   );

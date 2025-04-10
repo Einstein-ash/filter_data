@@ -27,7 +27,12 @@ const PinEntryScreen = () => {
   };
 
   const handlePinInput = () => {
-    navigate('/success'); 
+    navigate('/success', {
+      state : {
+        amountInput,
+        banking_name,
+      }
+    }); 
   };
 
   return (
@@ -35,7 +40,7 @@ const PinEntryScreen = () => {
       <div className="header">
         <div className="pin_input_bank_info">
           <p className='pin_input_bank_name'>State Bank of India</p>
-          <p>XXXX9035</p>   
+          <p>XXXX4075</p>   
         </div>
         <p className='pin_input_upi_logo'></p>
       </div>
