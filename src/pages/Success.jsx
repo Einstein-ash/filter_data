@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Success.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import SuccessAudio from '../assets/audio/success_final.mp3';
+import SuccessAudio from '../assets/audio/success_final_a.mp3';
 import { Share2 } from 'lucide-react';
 
 const Success = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const amountInput = location.state?.amountInput;
   const banking_name = location.state?.banking_name;
 
@@ -18,7 +20,15 @@ const Success = () => {
   const [paymentTime, setPaymentTime] = useState('');
   const [onSuccessWindow, setOnSuccessWindow] = useState(false);
 
+
+  const handleDone = () => {
+    navigate('/');
+  }
+
+
+
   const GetVideo = async () => {
+
     try {
       const res = await fetch(
         'https://lottie.host/fc5081aa-982a-485d-a6b1-2f5aafeb407e/ixBHyon6J5.lottie'
@@ -79,12 +89,17 @@ const Success = () => {
   // lazzy loading system eereeh ---------
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setOnSuccessWindow(true);
+      if(successVid){
+        setIsLoading(false);
+        setOnSuccessWindow(true);
+      }
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [successVid]);
+
+
+
 
   if (isLoading) {
     return (
@@ -124,7 +139,7 @@ const Success = () => {
           <Share2 size={16} style={{ marginRight: '8px' }} />
           Share screenshot
         </button>
-        <button className="success_btn_done">Done</button>
+        <button className="success_btn_done" onClick={handleDone}>Done</button>
       </div>
     </div>
   );
