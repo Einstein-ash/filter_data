@@ -83,3 +83,45 @@
   }
 
 
+/* UploadButton.css */
+.scanner_upload_btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e5e5e5;
+  color: #333;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  position: absolute;
+  top : 54vh;
+  z-index: 10000;
+  left : 24vw;
+}
+
+.scanner_upload_icon {
+  font-size: 20px;
+}
+
+
+.scanner_footer{
+  position : absolute;
+  border : 1px solid #444141;
+  height: 10vh;
+  width: 99vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 10001;
+  bottom : 0 ;
+  color : white;
+  background-color: #444141;
+  border-top-right-radius:10%;
+  border-top-left-radius:10%;
+}

@@ -203,6 +203,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QrScanner from 'qr-scanner';
+import { MdImage } from "react-icons/md"; 
 
 import './scannerCss.css';
 
@@ -296,22 +297,33 @@ const Scanner = () => {
 
   return (
     <div className="main_scanner_container">
-      <video
+      {/* <video
         ref={videoRef}
         autoPlay
         playsInline
         muted
         className="full_screen_video"
-      />
+      /> */}
       <canvas ref={canvasRef} style={{ display: 'none' }} />
 
       <div className="scanner_black_shadow_up_left"></div>
       <div className="scanner_black_shadow_up_middle"></div>
       {/*middle border wla part  */}
-      <div className="scanner_black_shadow_middle_border"></div>  
+      <div className="scanner_black_shadow_middle_border"></div> 
+
+          <button className="scanner_upload_btn">
+            <MdImage className="scanner_upload_icon" />
+            Upload from gallery
+          </button> 
 
       <div className="scanner_black_shadow_up_right"></div>
       <div className="scanner_black_shadow_bottom"></div>
+
+      <div className='scanner_footer'>
+        <p>___</p>
+        <p>Scan any QR code to pay</p>
+        <p>Google Pay . PhonePe . Paytm . UPI</p>
+      </div>
 
     </div>
   );
