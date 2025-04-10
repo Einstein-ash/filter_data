@@ -20,6 +20,8 @@ const Success = () => {
   const [successVid, setSuccessVid] = useState("");
   const Transaction_ID = Math.floor(100000000000 + Math.random() * 900000000000);
 
+  const [paymentTime , setPaymentTime] = useState("");
+
 
   
   const GetVideo = async () => {
@@ -34,14 +36,24 @@ const Success = () => {
       const url = URL.createObjectURL(blob);
       console.log("Fetched finally");
       setSuccessVid(url);
+
+      const now = new Date();
+      const formatted = now.toLocaleString('en-IN', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      });
+
+      // }).replace(/am|pm/, (match) => match.toUpperCase());
+
+      setPaymentTime(formatted);
       
     //   const audio = new Audio(SuccessAudio);
     //   audio.play();
-      
-    //   setTimeout(() => {
-    //       setMoveUp(true);
-    //     }, 3000);
-        
+
   
     } catch (error) {
       console.error("Error fetching video:", error);
@@ -61,7 +73,10 @@ const Success = () => {
     // const audio = new Audio(SuccessAudio);
     // audio.play();
 
-    const timeout = setTimeout(() => setMoveUp(true), 3000);
+    const timeout = setTimeout(() => {
+      setMoveUp(true);
+
+    }, 3000);
 
     return () => clearTimeout(timeout);
   }, [successVid]);
@@ -81,15 +96,20 @@ const Success = () => {
 
         <div className='success_data'>
           <p className='success_amount'> ₹{amountInput? {amountInput} : 100 }.00</p>
-          <p>Paid to {banking_name}</p>
+          <p className='success_user_name'>Paid to Sumit Kumar{banking_name}</p>
 
           <div className='empty_space_success'></div>
 
-          <p className='time_success'></p>
-          <p>UPI transaction ID: {Transaction_ID} </p>
+          <p className='success_time'>{paymentTime}</p>
+          <p className='success_transaction_id'>UPI transaction ID: {Transaction_ID} </p>
 
         </div>
+
       </div>
+        <div className="success_footer">
+          <button className='success_btn_share_ss'>Share screeenshot</button>
+          <button className='success_btn_done'>Done</button>
+        </div>
     </div>
   );
 };
