@@ -127,8 +127,8 @@
   .top-right {
     top: 2vh;
     right: 4vw;
-    border-top-color: #ffc107; /* yellow */
-    border-right-color: #ffc107;
+    border-top-color: #d49f00; 
+    border-right-color: #d49f00;
     border-top-right-radius: 30px;
   }
   

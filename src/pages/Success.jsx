@@ -59,10 +59,10 @@ const Success = () => {
   useEffect(() => {
     if (!successVid || onSuccessWindow) return;
     
-    const audio = new Audio(SuccessAudio);
-    audio.play();
     
     const timeout = setTimeout(() => {
+      const audio = new Audio(SuccessAudio);
+      audio.play();
       
       setAddedSuccessVid(successVid);
       setMoveUp(true);
