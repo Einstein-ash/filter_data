@@ -74,7 +74,7 @@ const Success = () => {
           autoplay
         />
 
-        <div>
+        <div className='success_data_show'>
           <h1 className='success_amount'> ₹ {amountInput}.00</h1>
           <p>Paid to {banking_name}</p>
 
