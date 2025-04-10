@@ -297,13 +297,13 @@ const Scanner = () => {
 
   return (
     <div className="main_scanner_container">
-      {/* <video
+      <video
         ref={videoRef}
         autoPlay
         playsInline
         muted
         className="full_screen_video"
-      /> */}
+      />
       <canvas ref={canvasRef} style={{ display: 'none' }} />
 
       <div className="scanner_black_shadow_up_left"></div>
