@@ -70,9 +70,11 @@ const PinEntryScreen = () => {
         ))}
       </div>
 
-      <div className="warning-box">
+      <div className="warning_box">
         <span className="cicular_warning_avatar">!</span>
-        <p>You are transferring money from your account to <strong>{banking_name}</strong></p>
+        <p>You are transferring money from your account to 
+        <p className='pinInput_warning_name'>{banking_name}</p>
+          </p>
       </div>
 
       {showNumpad && (
