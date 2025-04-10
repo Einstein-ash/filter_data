@@ -320,7 +320,7 @@ const Scanner = () => {
       <div className="scanner_black_shadow_bottom"></div>
 
       <div className='scanner_footer'>
-        <p className='scanner_footer_dash'>___</p>
+        <p className='scanner_footer_dash'></p>
 
         <p>Scan any QR code to pay</p>
         <p>Google Pay . PhonePe . Paytm . UPI</p>
