@@ -208,6 +208,8 @@ import { IoMdClose } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaQrcode } from "react-icons/fa";
 import { PiFlashlightBold } from "react-icons/pi";
+import { PiFlashlightLight } from "react-icons/pi";
+import { PiFlashlightRegular } from "react-icons/pi";
 
 
 import './scannerCss.css';
@@ -356,7 +358,9 @@ const Scanner = () => {
             <IoMdClose className="nav-icon" />
             <div className="nav-right-icons">
           
-                  <PiFlashlightBold className="nav-icon "  onClick={toggleFlashlight} />
+                  <PiFlashlightBold  color = {torchOn ? "#000" : "#fff" }className={ ` nav-icon ${torchOn ? 'scanner_torch_on' : ''} `} onClick={toggleFlashlight} />
+                  {/* <PiFlashlightLight className={ ` nav-icon scanner_torch_on ${torchOn ? 'scanner_torch_on' : ''} `} onClick={toggleFlashlight} /> */}
+                  {/* <PiFlashlightRegular className={ ` nav-icon scanner_torch_on ${torchOn ? 'scanner_torch_on' : ''} `} onClick={toggleFlashlight} /> */}
 
       
               <FaQrcode className="nav-icon" />
@@ -387,7 +391,6 @@ const Scanner = () => {
         <p>Scan any QR code to pay</p>
         <p>Google Pay . PhonePe . Paytm . UPI</p>
       </div>
-
 
     </div>
   );
