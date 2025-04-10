@@ -10,15 +10,31 @@
     overflow: hidden;
   }
 
+  .scanner_header{
+    position : absolute;
+
+    height: 13vh;
+    width: 99vw;
+  
+    display: flex;
+    flex-direction: column;
+  
+    z-index: 10002;
+    top : 0 ;
+
+
+  }
+
   .top-nav-bar {
+    position: relative;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent; /* black background */
     padding: 10px 16px;
     height: 50px;
-    position: relative;
-    z-index: 1000;
+
   }
   
   .nav-right-icons {
@@ -43,13 +59,14 @@
     top: 0;
     left: 0;
     z-index: 10;
+
   }
 
 
 
 
   .scanner_black_shadow_up_left {
-    position :fixed; 
+    position :absolute; 
     top: 0;
     left: 0;
     
@@ -61,7 +78,7 @@
 
   
   .scanner_black_shadow_up_middle {
-    position :fixed; 
+    position :absolute; 
     top: 0;
     left: 10vw;
     

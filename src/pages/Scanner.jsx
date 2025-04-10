@@ -341,26 +341,32 @@ const Scanner = () => {
 
   return (
     <div className="main_scanner_container">
-      {/* <video
+      <video
         ref={videoRef}
         autoPlay
         playsInline
         muted
         className="full_screen_video"
-      /> */}
+      />
       <canvas ref={canvasRef} style={{ display: 'none' }} />
 
-      <div className="top-nav-bar">
-      <IoMdClose className="nav-icon" />
-      <div className="nav-right-icons">
-    
-            <PiFlashlightBold className="nav-icon "  onClick={toggleFlashlight} />
 
- 
-        <FaQrcode className="nav-icon" />
-        <BsThreeDotsVertical className="nav-icon" />
+      <div className='scanner_header'>
+            <div className="top-nav-bar">
+            <IoMdClose className="nav-icon" />
+            <div className="nav-right-icons">
+          
+                  <PiFlashlightBold className="nav-icon "  onClick={toggleFlashlight} />
+
+      
+              <FaQrcode className="nav-icon" />
+              <BsThreeDotsVertical className="nav-icon" />
+            </div>
+          </div>
       </div>
-    </div>
+
+
+
 
       <div className="scanner_black_shadow_up_left"></div>
       <div className="scanner_black_shadow_up_middle"></div>
@@ -381,6 +387,7 @@ const Scanner = () => {
         <p>Scan any QR code to pay</p>
         <p>Google Pay . PhonePe . Paytm . UPI</p>
       </div>
+
 
     </div>
   );
