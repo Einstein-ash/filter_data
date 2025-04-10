@@ -216,6 +216,9 @@ const Scanner = () => {
   const [qrResult, setQrResult] = useState('');
   const [scanning, setScanning] = useState(false);
 
+  const [torchOn, setTorchOn] = useState(false);
+  const trackRef = useRef(null);
+
   const scanFrame = async () => {
     const canvas = canvasRef.current;
     const video = videoRef.current;
@@ -295,6 +298,42 @@ const Scanner = () => {
     startCamera();
   }, []);
 
+
+
+  const toggleFlashlight = async () => {
+    try {
+      if (!trackRef.current) {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: "environment" },
+        });
+        const track = stream.getVideoTracks()[0];
+        const capabilities = track.getCapabilities();
+
+        if (!capabilities.torch) {
+          alert("Flashlight not supported on this device.");
+          return;
+        }
+
+        trackRef.current = track;
+      }
+
+      setTorchOn(prev => {
+        const newState = !prev;
+        trackRef.current.applyConstraints({
+          advanced: [{ torch: newState }],
+        });
+        return newState;
+      });
+    } catch (error) {
+      console.error("Flashlight toggle failed:", error);
+      alert("Unable to access flashlight.");
+    }
+  };
+
+
+
+
+
   return (
     <div className="main_scanner_container">
       <video
@@ -323,6 +362,9 @@ const Scanner = () => {
         <p className='scanner_footer_dash'></p>
 
         <p>Scan any QR code to pay</p>
+        <button onClick={toggleFlashlight}>
+      {torchOn ? "Turn Off Flashlight" : "Turn On Flashlight"}
+    </button>
         <p>Google Pay . PhonePe . Paytm . UPI</p>
       </div>
 
