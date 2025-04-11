@@ -79,7 +79,7 @@ const Success = () => {
       setTransactionID(
         Math.floor(100000000000 + Math.random() * 900000000000)
       );
-    }, 6500);
+    }, 8500);
 
     return () => clearTimeout(timeout);
   }, [successVid]);
@@ -93,7 +93,7 @@ const Success = () => {
         setIsLoading(false);
         setOnSuccessWindow(true);
       }
-    }, 6000);
+    }, 8000);
 
     return () => clearTimeout(timer);
   }, [successVid]);
