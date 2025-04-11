@@ -229,7 +229,7 @@ const Success = () => {
     const audioTimeout = setTimeout(() => {
       const audio = new Audio(SuccessAudio);
       audio.play();
-    }, 1000);
+    }, 7000);
     
     const moveUpTimeout = setTimeout(() => {
       
@@ -237,7 +237,7 @@ const Success = () => {
       setTransactionID(
         Math.floor(100000000000 + Math.random() * 900000000000)
       );
-    }, 3000);
+    }, 10000);
 
     return () => {
       clearTimeout(audioTimeout);
@@ -255,7 +255,7 @@ const Success = () => {
           setShowDetails(true); // ⬅️ TRIGGER SHOW AFTER 1s
         }, 1500);
       }
-    }, 1000);
+    }, 7000);
 
     return () => clearTimeout(timer);
   }, [successVid]);
