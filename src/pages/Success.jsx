@@ -225,6 +225,9 @@ const Success = () => {
     if (!successVid || onSuccessWindow) return;
 
     setAddedSuccessVid(successVid);
+    setTransactionID(
+      Math.floor(100000000000 + Math.random() * 900000000000)
+    );
     
     const audioTimeout = setTimeout(() => {
       const audio = new Audio(SuccessAudio);
@@ -234,9 +237,6 @@ const Success = () => {
     const moveUpTimeout = setTimeout(() => {
       
       setMoveUp(true);
-      setTransactionID(
-        Math.floor(100000000000 + Math.random() * 900000000000)
-      );
     }, 10000);
 
     return () => {
