@@ -166,7 +166,7 @@
 
 
   .success_details_fade {
-    animation: fadeInUp 2s ease-in forwards;
+    animation: fadeInUp 4s ease-in forwards;
     opacity: 0;
   }
   
