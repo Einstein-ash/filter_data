@@ -272,10 +272,12 @@ const Scanner = () => {
 
       setTorchOn(false); // update local state
 
-      trackRef.current.applyConstraints({
-        advanced: [{ torch: false }],
-      });
-
+      if (trackRef.current) {
+        trackRef.current.applyConstraints({
+          advanced: [{ torch: false }],
+        });
+      }
+      
       setScanning(true);
       setQrResult(result);
       console.log('Scanned:', result);
