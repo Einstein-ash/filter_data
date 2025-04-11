@@ -261,13 +261,14 @@ const Scanner = () => {
     if (result && !scanning) {
       setScanning(true);
       setQrResult(result);
-      console.log('Scanned:', result);
+      // console.log('Scanned:', result);
+      if (navigator.vibrate) {
+        navigator.vibrate(50); 
+      }
 
       setTimeout(() => {
 
-        if (navigator.vibrate) {
-          navigator.vibrate(500); 
-        }
+
 
         navigate('/payment', {
           state: { qrText: result }
