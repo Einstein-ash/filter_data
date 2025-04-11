@@ -271,7 +271,7 @@ const Scanner = () => {
 
     if (result && !scanning) {
       if (navigator.vibrate) {
-        navigator.vibrate(50);
+        navigator.vibrate(40);
       }
   
       setTorchOn(false); // update local state
