@@ -229,7 +229,9 @@ const Scanner = () => {
     const video = videoRef.current;
     if (!canvas || !video) return;
 
-    const context = canvas.getContext('2d');
+    // const context = canvas.getContext('2d');
+    const context = canvas.getContext('2d', { willReadFrequently: true });
+
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -238,7 +240,9 @@ const Scanner = () => {
 
     // Scan original
     try {
-      const result = await QrScanner.scanImage(imageData);
+      // const result = await QrScanner.scanImage(imageData);
+      const { data: result } = await QrScanner.scanImage(imageData, { returnDetailedScanResult: true });
+
       handleResult(result);
       return;
     } catch (e) {
@@ -249,7 +253,10 @@ const Scanner = () => {
     invertImage(imageData);
     context.putImageData(imageData, 0, 0);
     try {
-      const result = await QrScanner.scanImage(canvas);
+      // const result = await QrScanner.scanImage(canvas);
+      const { data: result } = await QrScanner.scanImage(canvas, { returnDetailedScanResult: true });
+
+
       handleResult(result);
     } catch (e) {
       // No result
@@ -385,6 +392,13 @@ const Scanner = () => {
       <div className="scanner_black_shadow_up_middle"></div>
       {/*middle border wla part  */}
       <div className="scanner_black_shadow_middle_border">
+{/* 
+      <div className="scanner_inner_border0"></div>
+      <div className="scanner_inner_border1"></div>
+        <div className="scanner_inner_border2"></div>
+        <div className="scanner_inner_border3"></div>
+        <div className="scanner_inner_border4"></div> */}
+        
               <div className="scanner-box">
                 <div className="corner top-left" />
                 <div className="corner top-right" />
