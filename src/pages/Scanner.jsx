@@ -95,7 +95,6 @@ const Scanner = () => {
   const handleCloseScanner = () =>{
     navigate('/');
   }
-  
 
   const handleResult = async (result) => {
 
