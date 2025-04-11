@@ -11,10 +11,29 @@
 .top-icons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   padding: 0 8px;
   font-size: 20px;
   color: #333;
+  column-gap: 30px;
 }
+
+.exclamation{
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  /* height: 20px; */
+  width: 40px;
+  /* border:  1px solid black; */
+  justify-content: center;
+  align-items: flex-end;
+  top : 4px;
+  /* padding-top : 4px; */
+
+
+}
+
 
 .verify_icon{
     background-image: url("../assets//images/verify_icon.jpg");
@@ -34,7 +53,7 @@
 .avatar {
   width: 60px;
   height: 60px;
-  background-color: #d32f2f;
+  background-color: #d32f2fd2;
   color: white;
   font-size: 30px;
   display: flex;

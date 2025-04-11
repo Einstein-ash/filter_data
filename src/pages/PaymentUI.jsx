@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./PaymentScreen.css";
+// import { FaOctagonExclamation } from 'react-icons/fa';
+import { OctagonAlert } from 'lucide-react';
 
 const PaymentScreen = () => {
   const navigate = useNavigate();
@@ -94,7 +96,10 @@ useEffect(() => {
       <div className="top-icons">
         <span className="close">✕</span>
         <span>
-          <span className="exclamation">⚠️</span>
+          <div className="exclamation">
+            <OctagonAlert    />
+          </div>
+          <span>&nbsp; </span>
           <span className="dots">⋮</span>
         </span>
       </div>
@@ -124,6 +129,12 @@ useEffect(() => {
           name="amount_input"
           value={formatAmount(amountInput)}
           onChange={handleInputChange}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              handlePayClick(); 
+            }
+          }}
+
         />
 
         <div className="add-note">Add note</div>
