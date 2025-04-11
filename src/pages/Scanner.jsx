@@ -258,6 +258,11 @@ const Scanner = () => {
 
   const handleResult = (result) => {
     if (result && !scanning) {
+
+      if (navigator.vibrate) {
+        navigator.vibrate(300); 
+      }
+
       setScanning(true);
       setQrResult(result);
       console.log('Scanned:', result);
