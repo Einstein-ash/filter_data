@@ -99,9 +99,9 @@ useEffect(() => {
       extractBetween(qrText, "&pn=", "&mc=")
     ),
     banking_name: shorter(
-      extractBetween(qrText + "&aid=", "&pn=", "&aid=").toUpperCase(),
-      extractBetween(qrText, "&pn=", "&mc=").toUpperCase()
-    ),
+      extractBetween(qrText + "&aid=", "&pn=", "&aid="),
+      extractBetween(qrText, "&pn=", "&mc=")
+    ).toUpperCase(),
 
   }));
 }, [qrText]);
