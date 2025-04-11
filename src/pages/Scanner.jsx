@@ -263,33 +263,36 @@ const Scanner = () => {
     }
   };
 
-  const handleResult = (result) => {
+  const handleResult = async (result) => {
     if (result && !scanning) {
-
       if (navigator.vibrate) {
-        navigator.vibrate(100); 
+        navigator.vibrate(100);
       }
-
+  
       setTorchOn(false); // update local state
-
+  
       if (trackRef.current) {
-        trackRef.current.applyConstraints({
-          advanced: [{ torch: false }],
-        });
+        try {
+          await trackRef.current.applyConstraints({
+            advanced: [{ torch: false }],
+          });
+        } catch (err) {
+          console.warn("Failed to turn off torch:", err);
+        }
       }
-      
+  
       setScanning(true);
       setQrResult(result);
       console.log('Scanned:', result);
-
+  
       setTimeout(() => {
-
         navigate('/payment', {
           state: { qrText: result }
         });
       }, 1000);
     }
   };
+  
 
   const invertImage = (imageData) => {
     const data = imageData.data;
