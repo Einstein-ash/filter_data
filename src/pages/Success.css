@@ -166,7 +166,7 @@
 
 
   .success_details_fade {
-    animation: fadeInUp 1s ease-in forwards;
+    animation: fadeInUp 2s ease-in forwards;
     opacity: 0;
   }
   
@@ -177,7 +177,7 @@
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      /* transform: translateY(0); */
     }
   }
   
