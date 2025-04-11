@@ -263,6 +263,12 @@ const Scanner = () => {
         navigator.vibrate(100); 
       }
 
+      setTorchOn(false); // update local state
+
+      trackRef.current.applyConstraints({
+        advanced: [{ torch: false }],
+      });
+
       setScanning(true);
       setQrResult(result);
       console.log('Scanned:', result);
