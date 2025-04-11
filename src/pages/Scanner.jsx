@@ -259,17 +259,16 @@ const Scanner = () => {
 
   const handleResult = (result) => {
     if (result && !scanning) {
-      setScanning(true);
-      setQrResult(result);
-      // console.log('Scanned:', result);
+      
       if (navigator.vibrate) {
         navigator.vibrate(50); 
       }
+      setScanning(true);
+      setQrResult(result);
+      // console.log('Scanned:', result);
+      
 
       setTimeout(() => {
-
-
-
         navigate('/payment', {
           state: { qrText: result }
         });
