@@ -260,7 +260,7 @@ const Scanner = () => {
     if (result && !scanning) {
 
       if (navigator.vibrate) {
-        navigator.vibrate(300); 
+        navigator.vibrate(100); 
       }
 
       setScanning(true);
