@@ -134,23 +134,23 @@ useEffect(() => {
       </div>
 
       <div className="amount-section">
-        <span className="currency">₹</span>
+              <p className="currency">₹</p>
 
-        <input
-          type="tel"
-          inputMode="numeric"
-          pattern="[0-9]*"
-          className="amount-input"
-          name="amount_input"
-          value={formatAmount(amountInput)}
-          onChange={handleInputChange}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              handlePayClick(); 
-            }
-          }}
 
-        />
+              <input
+                type="tel"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                className="amount-input"
+                name="amount_input"
+                value={formatAmount(amountInput)}
+                onChange={handleInputChange}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handlePayClick(); 
+                  }
+                }}
+              />
 
         <div className="add-note">Add note</div>
       </div>
