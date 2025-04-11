@@ -80,9 +80,16 @@
     left: 0;
     
     /* z-index: 11; */
-    height: 50vh;
-    width: 10vw;
-    background-color: rgba(0, 0, 0, 0.699);
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgba(0, 0, 0, 0.699); */
+    background-image: url(".././assets/images/shadow_GOOD.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+
+    opacity: 0.7;
+    /* backface-visibility: ; */
   }
 
   
@@ -272,7 +279,7 @@
   position : absolute;
   border : 1px solid #303030;
   height: 13vh;
-  width: 99vw;
+  width: 100vw;
 
   display: flex;
   flex-direction: column;

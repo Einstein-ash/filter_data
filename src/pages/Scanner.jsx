@@ -397,9 +397,10 @@ const Scanner = () => {
 
 
 
-
       <div className="scanner_black_shadow_up_left"></div>
-      <div className="scanner_black_shadow_up_middle"></div>
+
+      {/* <div className="scanner_black_shadow_up_left"></div> */}
+      {/* <div className="scanner_black_shadow_up_middle"></div> */}
       {/*middle border wla part  */}
       <div className="scanner_black_shadow_middle_border">
 {/* 
@@ -423,8 +424,8 @@ const Scanner = () => {
             Upload from gallery
           </button> 
 
-      <div className="scanner_black_shadow_up_right"></div>
-      <div className="scanner_black_shadow_bottom"></div>
+      {/* <div className="scanner_black_shadow_up_right"></div>
+      <div className="scanner_black_shadow_bottom"></div> */}
 
       <div className='scanner_footer'>
         <p className='scanner_footer_dash'></p>
