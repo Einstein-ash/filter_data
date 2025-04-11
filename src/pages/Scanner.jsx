@@ -239,6 +239,15 @@ const Scanner = () => {
 
     const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
 
+    const brightness = getAverageBrightness(imageData);
+
+    if (brightness < 40 && !torchOn) {
+      toggleFlashlight(); // turn ON
+    } else if (brightness >= 40 && torchOn) {
+      toggleFlashlight(); // turn OFF
+    }
+
+
     // Scan original
     try {
       // const result = await QrScanner.scanImage(imageData);
@@ -264,6 +273,24 @@ const Scanner = () => {
       // No result
     }
   };
+
+
+  const getAverageBrightness = (imageData) => {
+    const data = imageData.data;
+    let total = 0;
+    for (let i = 0; i < data.length; i += 4) {
+      // RGB values, ignore alpha (data[i+3])
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+  
+      // Luminance formula (perceived brightness)
+      const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
+      total += brightness;
+    }
+    return total / (data.length / 4);
+  };
+  
 
   const handleResult = async (result) => {
 
