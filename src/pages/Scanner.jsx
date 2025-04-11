@@ -228,6 +228,7 @@ const Scanner = () => {
     const canvas = canvasRef.current;
     const video = videoRef.current;
     if (!canvas || !video) return;
+    if (!canvas || !video || scanning) return; // ✅ Prevent double scan
 
     // const context = canvas.getContext('2d');
     const context = canvas.getContext('2d', { willReadFrequently: true });
@@ -264,6 +265,9 @@ const Scanner = () => {
   };
 
   const handleResult = async (result) => {
+
+    if (!result || scanning) return;
+    
     if (result && !scanning) {
       if (navigator.vibrate) {
         navigator.vibrate(100);
