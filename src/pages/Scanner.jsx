@@ -264,6 +264,11 @@ const Scanner = () => {
       console.log('Scanned:', result);
 
       setTimeout(() => {
+
+        if (navigator.vibrate) {
+          navigator.vibrate(500); 
+        }
+
         navigate('/payment', {
           state: { qrText: result }
         });
