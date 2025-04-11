@@ -213,7 +213,6 @@ import { PiFlashlightBold } from "react-icons/pi";
 
 import './scannerCss.css';
 
-QrScanner.WORKER_PATH = '/qr-scanner-worker.min.js';
 
 const Scanner = () => {
   const videoRef = useRef(null);
@@ -259,16 +258,12 @@ const Scanner = () => {
 
   const handleResult = (result) => {
     if (result && !scanning) {
-      
-      if (navigator.vibrate) {
-        navigator.vibrate(50); 
-      }
       setScanning(true);
       setQrResult(result);
-      // console.log('Scanned:', result);
-      
+      console.log('Scanned:', result);
 
       setTimeout(() => {
+
         navigate('/payment', {
           state: { qrText: result }
         });

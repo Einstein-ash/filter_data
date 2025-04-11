@@ -27,8 +27,16 @@ const PaymentScreen = () => {
   console.log("qr text in payment page ----------");
   console.log(qrText);
 
+
+  const shorter = (a, b) => {
+    if (!a) return b;
+    if (!b) return a;
+    return a.length <= b.length ? a : b;
+  };
+  
+
   const extractBetween = (url, startKey, endKey) => {
-    url += "&aid=";
+    // url += "&aid=";
     const start = url.indexOf(startKey);
     const end = url.indexOf(endKey);
 
@@ -85,9 +93,16 @@ useEffect(() => {
 
   setUserData(prev => ({
     ...prev,
-    upi_id: extractBetween(qrText, "pay?pa=", "&pn="),
-    name: extractBetween(qrText, "&pn=", "&aid="),
-    banking_name: extractBetween(qrText, "&pn=", "&aid=").toUpperCase()
+    upi_id: extractBetween(qrText + "&aid=", "pay?pa=", "&pn="),
+    name: shorter(
+      extractBetween(qrText + "&aid=", "&pn=", "&aid="),
+      extractBetween(qrText, "&pn=", "&mc=")
+    ),
+    banking_name: shorter(
+      extractBetween(qrText + "&aid=", "&pn=", "&aid=").toUpperCase(),
+      extractBetween(qrText, "&pn=", "&mc=").toUpperCase()
+    ),
+
   }));
 }, [qrText]);
 
