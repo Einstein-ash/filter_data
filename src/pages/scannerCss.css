@@ -168,34 +168,34 @@
   
   .top-left {
     top: 2vh;
-    left: 4vw;
-    border-top-color: #ff6b6b; /* red */
-    border-left-color: #ff6b6b;
+    left: 2vw;
+    border-top-color: #EA4335; /* red */
+    border-left-color: #EA4335;
     border-top-left-radius: 30px;
     
   }
   
   .top-right {
     top: 2vh;
-    right: 4vw;
-    border-top-color: #d49f00; 
-    border-right-color: #d49f00;
+    right: -1vw;
+    border-top-color: #FDBD00; 
+    border-right-color: #FDBD00;
     border-top-right-radius: 30px;
   }
   
   .bottom-left {
-    bottom: 2vh;
-    left: 4vw;
-    border-bottom-color: #4dabf7; /* blue */
-    border-left-color: #4dabf7;
+    bottom: -1vh;
+    left: 2vw;
+    border-bottom-color: #3A81F1; /* blue */
+    border-left-color: #3A81F1;
     border-bottom-left-radius: 30px;
   }
   
   .bottom-right {
-    bottom: 2vh;
-    right: 4vw;
-    border-bottom-color: #51cf66; /* green */
-    border-right-color: #51cf66;
+    bottom: -1vh;
+    right: -2vw;
+    border-bottom-color: #2DA94F; /* green */
+    border-right-color: #2DA94F;
     border-bottom-right-radius: 30px;
   }
   
