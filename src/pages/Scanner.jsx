@@ -251,6 +251,7 @@ const Scanner = () => {
     }
 
     // Invert and scan
+
     invertImage(imageData);
     context.putImageData(imageData, 0, 0);
     try {
@@ -267,7 +268,7 @@ const Scanner = () => {
   const handleResult = async (result) => {
 
     if (!result || scanning) return;
-    
+
     if (result && !scanning) {
       if (navigator.vibrate) {
         navigator.vibrate(100);
@@ -289,11 +290,11 @@ const Scanner = () => {
       setQrResult(result);
       console.log('Scanned:', result);
   
-      setTimeout(() => {
+      // setTimeout(() => {
         navigate('/payment', {
           state: { qrText: result }
         });
-      }, 1000);
+      // }, 1000);
     }
   };
   
